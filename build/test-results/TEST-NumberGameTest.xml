@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="NumberGameTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2015-11-23T06:34:28" hostname="Miss-Lu-MacBook-Pro.local" time="0.001">
+  <properties/>
+  <testcase name="test_compare_input_number_1234_and_random_number_4123_return_0A4B" classname="NumberGameTest" time="0.0"/>
+  <testcase name="test_compare_input_number_and_random_number_return_2A1B" classname="NumberGameTest" time="0.0"/>
+  <testcase name="test_compare_input_number_1234_and_random_number_1235_return_3A0B" classname="NumberGameTest" time="0.0"/>
+  <testcase name="test_compare_input_number_1234_and_random_number_1243_return_2A2B" classname="NumberGameTest" time="0.0"/>
+  <testcase name="test_compare_input_number_1234_and_random_number_1234_return_4A0B" classname="NumberGameTest" time="0.0"/>
+  <testcase name="test_compare_input_number_1234_and_random_number_5678_return_0A0B" classname="NumberGameTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

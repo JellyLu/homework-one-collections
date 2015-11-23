@@ -2,7 +2,6 @@ import org.junit.Test;
 
 import java.util.HashSet;
 
-//import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
 import static org.junit.Assert.fail;
@@ -27,16 +26,16 @@ public class RandomNumberTest {
     public void test_random_number_no_repeat() throws Exception {
         String  randomNumber = randomNumberObj.generateRandomNumber();
 
-        boolean result = randomNumber.chars().allMatch( Character::isDigit);
-        assertThat( result, is(true) );
-//        int len = randomNumber.length();
-//        for ( int i = 0; i < len - 1; ++i ){
-//            for ( int j = i+1; j < len; ++j ){
-//                if ( randomNumber.charAt( i ) == randomNumber.charAt( j ) ){
-//                    fail();
-//                }
-//            }
-//        }
+//        boolean result = randomNumber.chars().allMatch( Character::isDigit);
+//        assertThat( result, is(true) );
+        int len = randomNumber.length();
+        for ( int i = 0; i < len - 1; ++i ){
+            for ( int j = i+1; j < len; ++j ){
+                if ( randomNumber.charAt( i ) == randomNumber.charAt( j ) ){
+                    fail();
+                }
+            }
+        }
     }
 
     @Test
@@ -64,7 +63,7 @@ public class RandomNumberTest {
         int times = 5;
 
         while ( times > 0 ) {
-            randomNumbers.add(RandomNumber.generateRandomNumber());
+            randomNumbers.add(new RandomNumber().generateRandomNumber());
             times --;
         }
 
@@ -73,28 +72,16 @@ public class RandomNumberTest {
 
     @Test
     public void test_random_number_is_random_in_10_times() throws Exception {
-        Set<String> randomNumbers = new HashSet<String>( );
+        HashSet<String> randomNumbers = new HashSet<String>( );
         int times = 10;
 
         while ( times > 0 ) {
-            randomNumbers.add(RandomNumber.generateRandomNumber());
+            randomNumbers.add(new RandomNumber().generateRandomNumber());
             times --;
         }
 
         assertThat( randomNumbers.size(), is( 10 ));
     }
 
-    @Test
-    public void test_random_number_is_random_in_100_times() throws Exception {
-        Set<String> randomNumbers = new HashSet<String>( );
-        int times = 100;
-
-        while ( times > 0 ) {
-            randomNumbers.add(RandomNumber.generateRandomNumber());
-            times --;
-        }
-
-        assertThat( randomNumbers.size(), is( 100 ));
-    }
 
 }

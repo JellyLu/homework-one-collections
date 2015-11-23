@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="GameConsoleTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2015-11-23T06:34:28" hostname="Miss-Lu-MacBook-Pro.local" time="0.001">
+  <properties/>
+  <testcase name="test_console_when_win_game" classname="GameConsoleTest" time="0.001"/>
+  <testcase name="setUp" classname="GameConsoleTest" time="0.0"/>
+  <testcase name="test_console_when_lose_game" classname="GameConsoleTest" time="0.0"/>
+  <system-out><![CDATA[Congratulations!
+Game Over
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
